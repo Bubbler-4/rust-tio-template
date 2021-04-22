@@ -21,6 +21,9 @@ run `start.sh` to build the Wasm package and start a local web server (so that y
 
 The default `index.html` has nothing visible, but it contains the minimal JS example that calls Wasm code and `console.log`s the results.
 
+The setup uses GitHub Pages to host the static page. When your code (on the `main` branch) is ready, switch to `gh-pages` branch,
+merge from `main`, and run `publish.sh` (which will build the package and expose the build artifacts to Git) and commit.
+
 ## Tips
 
 Due to how Wasm is designed, the types that can be passed across Wasm boundary are severely limited
