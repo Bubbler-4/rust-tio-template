@@ -1,0 +1,26 @@
+[package]
+name = "project"
+version = "0.1.0"
+authors = ["Bubbler-4"]
+edition = "2018"
+description = "A template for a Rust-powered static-page Try Online interface"
+repository = "https://github.com/Bubbler-4/rust-tio-template"
+license = "MIT"
+default-run = "mybin"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "mylib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mybin"
+path = "src/main.rs"
+
+[dependencies]
+nom = "6"
+
+[dependencies.wasm-bindgen]
+version = "0.2"

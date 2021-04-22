@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parser Demo</title>
+    <style type="text/css">
+        body {
+            font-family: "Fira Sans", "Courier New", Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+  <script type="module">
+     import init, { SKParseResult } from './pkg/mylib.js';
+     let wasm = await init();
+     let s = "S (S (K S) (S (K (S (K S))) (S (K (S (K K))) (S (K (S (K S))) (S (K S) K))))) (K (S (K K)))";
+     let result = SKParseResult.parse(s);
+     console.log(result);
+     console.log(result.bcl());
+     console.log(result.error_msg());
+  </script>
+</body>
+</html>
