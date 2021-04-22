@@ -28,4 +28,4 @@ merge from `main`, and run `publish.sh` (which will build the package and expose
 
 Due to how Wasm is designed, the types that can be passed across Wasm boundary are severely limited
 (basically, single primitive integer or floating value, a slice of them, or a string).
-In order to keep and pass around more complex data, Wasm-exported struct does the job (which gets exposed as a ), as in the example lib code.
+In order to keep and pass around more complex data, Wasm-exported struct does the job (which gets exposed as an opaque JS class), as in the example lib code.
